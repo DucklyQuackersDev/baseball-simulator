@@ -32,7 +32,8 @@ Follow the steps below:
 - Full league simulation
 
 ## Built With
-- [VS Code](https://code.visualstudio.com/) - C# text editor and compiler
+- [VS Code](https://code.visualstudio.com/) - text editor
+- [Python 3.14](https://www.python.org/downloads/release/python-3140/)
 
 ## Versioning
 Current version 1.0
