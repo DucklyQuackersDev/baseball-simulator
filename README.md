@@ -25,7 +25,7 @@ Follow the steps below:
 - fielding positions and stats
 - more specific hit data (where was the ball hit? what positions we're involved in the fielding)
 - errors
-- better baserunning functionality (stolen bases, 1st to 3rd on singles, etc)
+- better baserunning functionality (stolen bases, 1st to 3rd on singles, advance in a fielders choice)
 - better pitching (wild pitches, hit by pitch etc.)
 
 ## Desired Features
