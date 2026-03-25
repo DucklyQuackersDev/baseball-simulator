@@ -42,4 +42,4 @@ Current version 1.0
 - **Duck** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/DucklyQuackersDev/baseball-simulator/blob/main/License) file for details
+This project is licensed under the GNU GPL 3.0 License - see the [LICENSE.md](https://github.com/DucklyQuackersDev/baseball-simulator/blob/main/License) file for details
