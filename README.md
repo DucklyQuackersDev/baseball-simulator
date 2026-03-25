@@ -39,7 +39,7 @@ Follow the steps below:
 Current version 1.0
 
 ## Authors
-- **Zac Saylor** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)
+- **Duck** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/saylorz/DungeonRaider/blob/master/LICENSE) file for details
