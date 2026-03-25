@@ -1,5 +1,5 @@
 # Baseball Simulation
-Dev console framework to be used in my personal projects
+Simple Baseball game simulation
 
 ## Getting Started
 This project was built in python 3.14 and is required to run this file
