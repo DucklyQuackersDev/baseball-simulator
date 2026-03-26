@@ -1,5 +1,7 @@
 import random
 
+outTypes = ["groundout", "flyout", "lineout"]
+
 ## Single pitch simulation
 def SimulatePitch():
     pitchRoll = random.randrange(0, 1000)
@@ -46,7 +48,7 @@ def SimulateAtBat():
                     outcome = "homerun"
                 break
             else:
-                outcome = "out"                
+                outcome = random.choice(outTypes)             
                 break
                 
     if strikes == 3:
