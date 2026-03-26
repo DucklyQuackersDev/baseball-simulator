@@ -13,7 +13,7 @@ Follow the steps below:
 
 3. Open terminal and navigate to file location
 
-4. type "python baseball.py" in cmd to run
+4. type "python main.py" in cmd to run
 
 ## Current Features
 - Simple game simulation with working base running mechanics and score tracking
