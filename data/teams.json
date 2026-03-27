@@ -1,0 +1,6 @@
+{
+    "teams": [
+        {"name": "Yankees", "city": "New York" },
+        {"name": "Red Sox", "city": "Boston" }
+    ]
+}
