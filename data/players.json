@@ -8,7 +8,7 @@
                 "power":        0.95,
                 "discipline":   0.78,
                 "speed":        0.60,
-                "gb_tendency":  0.40,
+                "gb_rate":  0.40,
                 "arm_strength": 0.88,
                 "fielding":     0.85
             },
@@ -22,7 +22,7 @@
                 "power":        0.10,
                 "discipline":   0.20,
                 "speed":        0.30,
-                "gb_tendency":  0.55,
+                "gb_rate":  0.55,
                 "arm_strength": 0.70,
                 "fielding":     0.50
             },
@@ -30,7 +30,7 @@
                 "stuff":       0.92,
                 "control":     0.88,
                 "stamina":     0.85,
-                "gb_tendency": 0.42
+                "gb_rate": 0.42
             }
         }
     ]
