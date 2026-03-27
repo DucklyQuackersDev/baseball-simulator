@@ -1,0 +1,37 @@
+{
+    "players": [
+        {
+            "name": "Judge",
+            "position": "RF",
+            "ratings": {
+                "contact":      0.82,
+                "power":        0.95,
+                "discipline":   0.78,
+                "speed":        0.60,
+                "gb_tendency":  0.40,
+                "arm_strength": 0.88,
+                "fielding":     0.85
+            },
+            "pitching_ratings": null
+        },
+        {
+            "name": "Cole",
+            "position": "SP",
+            "ratings": {
+                "contact":      0.15,
+                "power":        0.10,
+                "discipline":   0.20,
+                "speed":        0.30,
+                "gb_tendency":  0.55,
+                "arm_strength": 0.70,
+                "fielding":     0.50
+            },
+            "pitching_ratings": {
+                "stuff":       0.92,
+                "control":     0.88,
+                "stamina":     0.85,
+                "gb_tendency": 0.42
+            }
+        }
+    ]
+}
