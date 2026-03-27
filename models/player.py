@@ -124,8 +124,9 @@ class PitchingGameStats:
 ## Player ##
 class Player:
     """Single player - holds ratings, position, and stats"""
-    def __init__(self, name, position, ratings, pitching_ratings=None):
-        self.name = name
+    def __init__(self, first_name, last_name, position, ratings, pitching_ratings=None):
+        self.first_name = first_name
+        self.last_name = last_name
         self.position = position
         self.ratings = ratings
         self.pitching_ratings = ratings
@@ -137,6 +138,14 @@ class Player:
         #single game stats
         self.game_batting_stats = BattingGameStats()
         self.game_pitching_stats = PitchingGameStats() if pitching_ratings else None
+
+    @property
+    def name(self):
+        return f"{self.first_name} {self.last_name}"
+    
+    @property
+    def short_name(self):
+        return f"{self.first_name[0]}. {self.last_name}"
 
     def is_pitcher(self):
         return self.position in ("SP", "RP")

@@ -28,7 +28,8 @@ def load_player(data):
     pitching_ratings = load_pitching_ratings(data["pitching_ratings"]) if data["pitching_ratings"] else None
 
     return Player(
-        name = data["name"],
+        first_name = data["first_name"],
+        last_name = data["last_name"],
         position = data["position"],
         ratings = ratings,
         pitching_ratings = pitching_ratings

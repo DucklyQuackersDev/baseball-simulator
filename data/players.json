@@ -1,7 +1,8 @@
 {
     "players": [
         {
-            "name": "Judge",
+            "first_name": "Aaron",
+            "flast_name": "Judge",
             "position": "RF",
             "ratings": {
                 "contact":      0.82,
@@ -15,7 +16,8 @@
             "pitching_ratings": null
         },
         {
-            "name": "Cole",
+            "first_name": "Gerrit",
+            "last_name": "Cole",
             "position": "SP",
             "ratings": {
                 "contact":      0.15,
