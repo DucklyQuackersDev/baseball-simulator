@@ -17,11 +17,10 @@ Follow the steps below:
 
 ## Current Features
 - Simple game simulation with working base running mechanics and score tracking
-- Simplified teams with no lineups or positions
+- 2 teams with players assigned randomly at runtime
+- Player stats affect hitting outcomes
 
 ## Upcoming Features
-- Team Lineups with basic player functionality
-- Player stats (speed, strength, fielding)
 - fielding positions and stats
 - more specific hit data (where was the ball hit? what positions we're involved in the fielding)
 - errors
@@ -29,7 +28,7 @@ Follow the steps below:
 - better pitching (wild pitches, hit by pitch etc.)
 
 ## Desired Features
-- Full league simulation
+- Full league season simulation
 
 ## Built With
 - [VS Code](https://code.visualstudio.com/) - text editor
