@@ -129,7 +129,7 @@ class Player:
         self.last_name = last_name
         self.position = position
         self.ratings = ratings
-        self.pitching_ratings = ratings
+        self.pitching_ratings = pitching_ratings
 
         #career stats
         self.batting_stats = BattingStats()
@@ -175,6 +175,23 @@ class Player:
                     stats.strikeouts += 1
 
             stats.rbi = rbis
+
+    def record_pitching(self, event, runs_scored, innings_pitched=0):
+        for stats in [self.pitching_stats, self.game_pitching_stats]:
+            match event:
+                case "walk":
+                    stats.walks_allowed += 1
+                case "strikeout":
+                    stats.strikeouts += 1
+                case "homerun":
+                    stats.homeruns_allowed += 1
+                    stats.hits_allowed += 1
+                case "single" | "double" | "triple":
+                    stats.hits_allowed += 1
+            
+            stats.runs_allowed += runs_scored
+            stats.earned_runs += runs_scored
+            stats.innings_pitched += innings_pitched
 
     def record_run(self):
         """When the player scores"""

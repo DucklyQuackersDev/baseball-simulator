@@ -87,6 +87,8 @@ def handle_homerun(bases, runs):
     return bases, runs
 
 def advance_bases(event, bases, runs, outs):
+    runs_before = runs
+
     match event:
         case "walk":
             bases, runs = handle_walk(bases, runs)
@@ -109,5 +111,5 @@ def advance_bases(event, bases, runs, outs):
         case _:
             outs += 1
 
-
-    return bases, runs, outs
+    runs_scored = runs - runs_before
+    return bases, runs, outs, runs_scored

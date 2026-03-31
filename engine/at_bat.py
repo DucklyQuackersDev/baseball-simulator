@@ -1,61 +1,80 @@
 import random
 
-outTypes = ["groundout", "flyout", "lineout"]
-
-## Single pitch simulation
-def SimulatePitch():
-    pitchRoll = random.randrange(0, 1000)
-    
-    if pitchRoll < 250:
-        outcome = "ball"
-    elif pitchRoll > 600:
-        outcome = "strike"
-    else:
-        outcome = "contact"
-
-    return outcome
+def estimate_pitch_count(event):
+    """Estimate pitches thrown in at bat"""
+    match event:
+        case "strikeout":
+            return random.randint(4, 6)   # deep counts on strikeouts
+        case "walk":
+            return random.randint(4, 6)   # walks also run deep
+        case "homerun":
+            return random.randint(1, 4)
+        case "single":
+            return random.randint(1, 4)
+        case "double":
+            return random.randint(1, 4)
+        case "triple":
+            return random.randint(1, 4)
+        case "groundout":
+            return random.randint(1, 3)   # quick contact outs
+        case "flyout":
+            return random.randint(1, 3)
+        case "lineout":
+            return random.randint(1, 3)
+        case _:
+            return 1
 
 ## Full At Bat
-def SimulateAtBat():
-    n = 0 ##Pitch Count
-    strikes = 0
-    balls = 0
+def SimulateAtBat(batter, pitcher):
+    """Simualte a single at bat - returns event and pitch count"""
 
-    while strikes < 3 and balls < 4:
-        pitch = SimulatePitch() ##what is pitch
+    # Base Rates
+    base_bb_rate = 0.085
+    base_k_rate = 0.225
+    base_hr_rate = 0.034
+    base_hit_rate = 0.240
+
+    # Rating Modifiers
+    bb_rate  = base_bb_rate  + (batter.ratings.discipline - 0.50)          * 0.05 \
+                             + (0.50 - pitcher.pitching_ratings.control)    * 0.05
     
+    k_rate   = base_k_rate   + (0.50 - batter.ratings.discipline)          * 0.08 \
+                             + (pitcher.pitching_ratings.stuff - 0.50)      * 0.08
+    
+    hr_rate  = base_hr_rate  + (batter.ratings.power - 0.50)               * 0.04 \
+                             + (0.50 - pitcher.pitching_ratings.stuff)      * 0.02
+    
+    hit_rate = base_hit_rate + (batter.ratings.contact - 0.50)             * 0.08 \
+                             + (0.50 - pitcher.pitching_ratings.stuff)      * 0.04
+    
+    # Prevent negatives or values greater than 1
+    bb_rate = max(0.01, min(bb_rate, 0.20))
+    k_rate = max(0.05, min(k_rate, 0.45))
+    hr_rate = max(0.00, min(hr_rate, 0.40))
 
-        if pitch == "ball":
-            balls+=1
-        elif pitch == "strike":
-            strikes+=1
+    # Roll
+    roll = random.random()
+
+    if roll < bb_rate:
+        event = "walk"
+    elif roll < bb_rate + k_rate:
+        event = "strikeout"
+    elif roll < bb_rate + k_rate + hr_rate:
+        event = "homerun"
+    elif roll < bb_rate + k_rate + hr_rate + hit_rate:
+        hit_roll = random.random()
+        if hit_roll < 0.60:
+            event = "single"
+        elif hit_roll < 0.85:
+            event = "double"
         else:
-            contactOutcome = random.randrange(0,1000)
-
-            if contactOutcome < 200:
-                if strikes != 2:
-                    strikes+=1
-            elif contactOutcome >= 200 and contactOutcome < 520:
-                hitType = random.randrange(0,1338)
-        
-                if hitType < 872:
-                    outcome = "single"
-                elif hitType > 871 and hitType < 1130:
-                    outcome = "double"
-                elif hitType > 1129 and hitType < 1151:
-                    outcome = "triple"
-                elif hitType > 1150:
-                    outcome = "homerun"
-                break
-            else:
-                outcome = random.choice(outTypes)             
-                break
-                
-    if strikes == 3:
-        outcome = "strike out"
+            event = "triple"
+    else:
+        if random.random() < batter.ratings.gb_rate:
+            event = "groundout"
+        else:
+            event = "flyout"
     
-    if balls == 4:
-        outcome = "walk"
+    pitches = estimate_pitch_count(event)
+    return event, pitches
     
-    ##print(outcome)
-    return outcome

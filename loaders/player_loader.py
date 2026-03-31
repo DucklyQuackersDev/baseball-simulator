@@ -40,7 +40,7 @@ def load_players(filepath):
     with open(filepath) as f:
         data = json.load(f)
 
-    players = [load_players(p) for p in data["players"]]
+    players = [load_player(p) for p in data["players"]]
 
     print(f"Loaded {len(players)} players from {filepath}")
     return players

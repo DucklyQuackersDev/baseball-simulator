@@ -2,7 +2,7 @@
     "players": [
         {
             "first_name": "Aaron",
-            "flast_name": "Judge",
+            "last_name": "Judge",
             "position": "RF",
             "ratings": {
                 "contact":      0.82,
@@ -12,6 +12,261 @@
                 "gb_rate":  0.40,
                 "arm_strength": 0.88,
                 "fielding":     0.85
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Shohei",
+            "last_name": "Ohtani",
+            "position": "DH",
+            "ratings": {
+                "contact":      0.88,
+                "power":        0.97,
+                "discipline":   0.82,
+                "speed":        0.75,
+                "gb_rate":  0.38,
+                "arm_strength": 0.85,
+                "fielding":     0.70
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Freddie",
+            "last_name": "Freeman",
+            "position": "1B",
+            "ratings": {
+                "contact":      0.90,
+                "power":        0.82,
+                "discipline":   0.85,
+                "speed":        0.55,
+                "gb_rate":  0.42,
+                "arm_strength": 0.72,
+                "fielding":     0.88
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Mookie",
+            "last_name": "Betts",
+            "position": "SS",
+            "ratings": {
+                "contact":      0.88,
+                "power":        0.78,
+                "discipline":   0.80,
+                "speed":        0.88,
+                "gb_rate":  0.44,
+                "arm_strength": 0.85,
+                "fielding":     0.95
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Jose",
+            "last_name": "Ramirez",
+            "position": "3B",
+            "ratings": {
+                "contact":      0.87,
+                "power":        0.85,
+                "discipline":   0.78,
+                "speed":        0.80,
+                "gb_rate":  0.45,
+                "arm_strength": 0.82,
+                "fielding":     0.90
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Rafael",
+            "last_name": "Devers",
+            "position": "3B",
+            "ratings": {
+                "contact":      0.84,
+                "power":        0.88,
+                "discipline":   0.70,
+                "speed":        0.55,
+                "gb_rate":  0.48,
+                "arm_strength": 0.78,
+                "fielding":     0.80
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Julio",
+            "last_name": "Rodriguez",
+            "position": "CF",
+            "ratings": {
+                "contact":      0.83,
+                "power":        0.80,
+                "discipline":   0.72,
+                "speed":        0.92,
+                "gb_rate":  0.42,
+                "arm_strength": 0.84,
+                "fielding":     0.90
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Kyle",
+            "last_name": "Tucker",
+            "position": "RF",
+            "ratings": {
+                "contact":      0.85,
+                "power":        0.82,
+                "discipline":   0.80,
+                "speed":        0.78,
+                "gb_rate":  0.43,
+                "arm_strength": 0.83,
+                "fielding":     0.87
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Yordan",
+            "last_name": "Alvarez",
+            "position": "LF",
+            "ratings": {
+                "contact":      0.86,
+                "power":        0.93,
+                "discipline":   0.80,
+                "speed":        0.50,
+                "gb_rate":  0.40,
+                "arm_strength": 0.75,
+                "fielding":     0.72
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Bo",
+            "last_name": "Bichette",
+            "position": "SS",
+            "ratings": {
+                "contact":      0.85,
+                "power":        0.72,
+                "discipline":   0.65,
+                "speed":        0.82,
+                "gb_rate":  0.47,
+                "arm_strength": 0.80,
+                "fielding":     0.82
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Pete",
+            "last_name": "Alonso",
+            "position": "1B",
+            "ratings": {
+                "contact":      0.78,
+                "power":        0.92,
+                "discipline":   0.72,
+                "speed":        0.40,
+                "gb_rate":  0.38,
+                "arm_strength": 0.70,
+                "fielding":     0.80
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Gunnar",
+            "last_name": "Henderson",
+            "position": "SS",
+            "ratings": {
+                "contact":      0.80,
+                "power":        0.83,
+                "discipline":   0.74,
+                "speed":        0.78,
+                "gb_rate":  0.44,
+                "arm_strength": 0.82,
+                "fielding":     0.88
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "William",
+            "last_name": "Contreras",
+            "position": "C",
+            "ratings": {
+                "contact":      0.80,
+                "power":        0.75,
+                "discipline":   0.70,
+                "speed":        0.45,
+                "gb_rate":  0.50,
+                "arm_strength": 0.85,
+                "fielding":     0.82
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Adley",
+            "last_name": "Rutschman",
+            "position": "C",
+            "ratings": {
+                "contact":      0.82,
+                "power":        0.70,
+                "discipline":   0.85,
+                "speed":        0.48,
+                "gb_rate":  0.48,
+                "arm_strength": 0.90,
+                "fielding":     0.92
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Luis",
+            "last_name": "Arraez",
+            "position": "2B",
+            "ratings": {
+                "contact":      0.97,
+                "power":        0.45,
+                "discipline":   0.82,
+                "speed":        0.60,
+                "gb_rate":  0.55,
+                "arm_strength": 0.68,
+                "fielding":     0.85
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Elly",
+            "last_name": "De La Cruz",
+            "position": "SS",
+            "ratings": {
+                "contact":      0.72,
+                "power":        0.82,
+                "discipline":   0.60,
+                "speed":        0.98,
+                "gb_rate":  0.45,
+                "arm_strength": 0.92,
+                "fielding":     0.80
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Corbin",
+            "last_name": "Carroll",
+            "position": "CF",
+            "ratings": {
+                "contact":      0.78,
+                "power":        0.68,
+                "discipline":   0.74,
+                "speed":        0.95,
+                "gb_rate":  0.46,
+                "arm_strength": 0.78,
+                "fielding":     0.92
+            },
+            "pitching_ratings": null
+        },
+        {
+            "first_name": "Michael",
+            "last_name": "Harris",
+            "position": "CF",
+            "ratings": {
+                "contact":      0.78,
+                "power":        0.72,
+                "discipline":   0.68,
+                "speed":        0.88,
+                "gb_rate":  0.44,
+                "arm_strength": 0.82,
+                "fielding":     0.93
             },
             "pitching_ratings": null
         },
@@ -29,10 +284,150 @@
                 "fielding":     0.50
             },
             "pitching_ratings": {
-                "stuff":       0.92,
-                "control":     0.88,
-                "stamina":     0.85,
-                "gb_rate": 0.42
+                "stuff":        0.95,
+                "control":      0.92,
+                "stamina":      0.88,
+                "gb_rate":  0.42
+            }
+        },
+        {
+            "first_name": "Spencer",
+            "last_name": "Strider",
+            "position": "SP",
+            "ratings": {
+                "contact":      0.12,
+                "power":        0.08,
+                "discipline":   0.18,
+                "speed":        0.25,
+                "gb_rate":  0.50,
+                "arm_strength": 0.65,
+                "fielding":     0.48
+            },
+            "pitching_ratings": {
+                "stuff":        0.97,
+                "control":      0.82,
+                "stamina":      0.80,
+                "gb_rate":  0.38
+            }
+        },
+        {
+            "first_name": "Tarik",
+            "last_name": "Skubal",
+            "position": "SP",
+            "ratings": {
+                "contact":      0.14,
+                "power":        0.09,
+                "discipline":   0.22,
+                "speed":        0.28,
+                "gb_rate":  0.52,
+                "arm_strength": 0.68,
+                "fielding":     0.50
+            },
+            "pitching_ratings": {
+                "stuff":        0.93,
+                "control":      0.90,
+                "stamina":      0.85,
+                "gb_rate":  0.44
+            }
+        },
+        {
+            "first_name": "Pablo",
+            "last_name": "Lopez",
+            "position": "SP",
+            "ratings": {
+                "contact":      0.16,
+                "power":        0.10,
+                "discipline":   0.20,
+                "speed":        0.28,
+                "gb_rate":  0.53,
+                "arm_strength": 0.66,
+                "fielding":     0.52
+            },
+            "pitching_ratings": {
+                "stuff":        0.85,
+                "control":      0.88,
+                "stamina":      0.84,
+                "gb_rate":  0.46
+            }
+        },
+        {
+            "first_name": "Edwin",
+            "last_name": "Diaz",
+            "position": "RP",
+            "ratings": {
+                "contact":      0.12,
+                "power":        0.08,
+                "discipline":   0.15,
+                "speed":        0.25,
+                "gb_rate":  0.48,
+                "arm_strength": 0.65,
+                "fielding":     0.45
+            },
+            "pitching_ratings": {
+                "stuff":        0.97,
+                "control":      0.80,
+                "stamina":      0.40,
+                "gb_rate":  0.40
+            }
+        },
+        {
+            "first_name": "Ryan",
+            "last_name": "Helsley",
+            "position": "RP",
+            "ratings": {
+                "contact":      0.12,
+                "power":        0.08,
+                "discipline":   0.15,
+                "speed":        0.25,
+                "gb_rate":  0.48,
+                "arm_strength": 0.65,
+                "fielding":     0.45
+            },
+            "pitching_ratings": {
+                "stuff":        0.95,
+                "control":      0.82,
+                "stamina":      0.38,
+                "gb_rate":  0.42
+            }
+        },
+        {
+            "first_name": "Clay",
+            "last_name": "Holmes",
+            "position": "RP",
+            "ratings": {
+                "contact":      0.13,
+                "power":        0.08,
+                "discipline":   0.15,
+                "speed":        0.25,
+                "gb_rate":  0.48,
+                "arm_strength": 0.65,
+                "fielding":     0.45
+            },
+            "pitching_ratings": {
+                "stuff":        0.82,
+                "control":      0.85,
+                "stamina":      0.38,
+                "gb_rate":  0.72
+            }
+        },
+        {
+            "first_name": "Alexis",
+            "last_name": "Diaz",
+            "position": "RP",
+            "ratings": {
+                "contact":      0.12,
+                "power":        0.08,
+                "discipline":   0.15,
+                "speed":        0.25,
+                "gb_rate":  0.48,
+                "arm_strength": 0.65,
+                "fielding":     0.45
+            },
+            "pitching_ratings": {
+                "stuff":        0.88,
+                "control":      0.84,
+                "stamina":      0.40,
+                "gb_rate":  0.44
             }
         }
     ]

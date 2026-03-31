@@ -36,7 +36,7 @@ Follow the steps below:
 - [Python 3.14](https://www.python.org/downloads/release/python-3140/)
 
 ## Versioning
-Current version 1.0.3
+Current version 2.0
 
 ## Authors
 - **Duck** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)

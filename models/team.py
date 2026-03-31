@@ -28,7 +28,7 @@ class Team:
         print(f"\n{self.city} {self.name} Lineup:")
         for i, player in enumerate(self.lineup):
             print(f"  {i + 1}. {player.name:<15} {player.position}")
-        print(f"  SP: {self.current_pitcher}")
+        print(f"  SP: {self.current_pitcher.name}")
 
     def print_box_score(self):
         print(f"\n{self.city} {self.name} Box Score:")
