@@ -12,7 +12,7 @@ def SimulateInning(offense, defense):
     """Half inning simulation"""
     outs = 0
     runs = 0
-    bases = [False, False, False] ##at bases[3] would be home, but we dont need that since no one can occupy home, a runner eaching index 3 that runner instead scores
+    bases = [None, None, None] ##at bases[3] would be home, but we dont need that since no one can occupy home, a runner eaching index 3 that runner instead scores
 
     while outs < 3:
         batter = offense.get_current_batter()
@@ -23,7 +23,7 @@ def SimulateInning(offense, defense):
         
         pitcher.game_pitching_stats.pitches += pitches
 
-        bases, runs, outs, runs_scored = advance_bases(event, bases, runs, outs)
+        bases, runs, outs, runs_scored = advance_bases(event, bases, runs, outs, batter)
 
         batter.record_at_bat(event, rbis=runs_scored)
         pitcher.record_pitching(event, runs_scored)

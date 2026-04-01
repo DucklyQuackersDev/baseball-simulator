@@ -18,7 +18,7 @@ Follow the steps below:
 ## Current Features
 - Simple game simulation with working base running mechanics and score tracking
 - 2 teams with players assigned randomly at runtime
-- Player stats affect hitting outcomes
+- Player stats affect hitting outcomes and run bases
 
 ## Upcoming Features
 - fielding positions and stats
@@ -35,7 +35,7 @@ Follow the steps below:
 - [Python 3.14](https://www.python.org/downloads/release/python-3140/)
 
 ## Versioning
-Current version 2.0
+Current version 2.1.0
 
 ## Authors
 - **Duck** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)
