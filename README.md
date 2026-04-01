@@ -4,7 +4,7 @@ Simple Baseball game simulation
 ## Getting Started
 This project was built in python 3.14 and is required to run this file
 
-## Installing
+## Installing and Running
 Follow the steps below:
 
 1. Download the zip files from this repository 
