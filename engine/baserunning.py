@@ -47,14 +47,14 @@ def handle_out(bases, outs, batter, event_type="generic"):
             pass
         case "groundout":
             outs += 1
-            if bases[FIRST] and bases[SECOND] and bases[THIRD]: # Runner on 1st, 2nd, and 3rd
+            if bases[FIRST] and bases[SECOND] and bases[THIRD]: # Runner on 1st, 2nd, and 3rd - out at home
                 bases[THIRD] = bases[SECOND]
                 bases[SECOND] = bases[FIRST]
                 bases[FIRST] = batter
-            elif bases[FIRST] and bases[SECOND]: # Runner on first and second
+            elif bases[FIRST] and bases[SECOND]: # Runner on first and second - out at third
                 bases[SECOND] = bases[FIRST]
                 bases[FIRST] = batter
-            elif bases[FIRST]: # Runner on First
+            elif bases[FIRST]: # Runner on First - out at second
                 bases[FIRST] = batter
 
             # TODO: double plays
