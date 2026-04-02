@@ -23,9 +23,9 @@ def SimulateInning(offense, defense):
         
         pitcher.game_pitching_stats.pitches += pitches
 
-        bases, runs, outs, runs_scored = advance_bases(event, bases, runs, outs, batter)
+        bases, runs, outs, runs_scored, rbis = advance_bases(event, bases, runs, outs, batter)
 
-        batter.record_at_bat(event, rbis=runs_scored)
+        batter.record_at_bat(event, rbis=rbis)
         pitcher.record_pitching(event, runs_scored)
 
         print(f"  {batter.short_name:<12} {event:<12} | "

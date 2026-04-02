@@ -174,7 +174,7 @@ class Player:
                 case "strikeout":
                     stats.strikeouts += 1
 
-            stats.rbi = rbis
+            stats.rbi += rbis
 
     def record_pitching(self, event, runs_scored, innings_pitched=0):
         for stats in [self.pitching_stats, self.game_pitching_stats]:

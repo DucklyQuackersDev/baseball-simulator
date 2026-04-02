@@ -12,6 +12,28 @@ def score_runner(runner, runs):
     runs += 1
     return runs
 
+def calculate_rbis(event, bases_before, runs_scored):
+    """Calculate RBIs for batter, not every run is an rbi"""
+    match event:
+        case "homerun":
+            return runs_scored
+        case "single" | "double" | "triple":
+            return runs_scored
+        case "walk":
+            runner_on_first  = bases_before[FIRST]  is not None
+            runner_on_second = bases_before[SECOND] is not None
+            runner_on_third  = bases_before[THIRD]  is not None
+            if runner_on_first and runner_on_second and runner_on_third:
+                return 1
+            return 0
+        case "groundout" | "flyout" | "lineout":
+            # TODO: sac fly and fielders choice
+            return 0
+        case "strikeout":
+            return 0
+        case _:
+            return 0
+
 # Outs
 def handle_out(bases, outs, batter, event_type="generic"):
     """Batter is out unless groundout, then lead runner"""
@@ -125,6 +147,7 @@ def handle_homerun(bases, runs, batter):
 # Handler
 def advance_bases(event, bases, runs, outs, batter):
     runs_before = runs
+    bases_before = [b for b in bases]
 
     match event:
         case "walk":
@@ -149,4 +172,5 @@ def advance_bases(event, bases, runs, outs, batter):
             outs += 1
 
     runs_scored = runs - runs_before
-    return bases, runs, outs, runs_scored
+    rbis = calculate_rbis(event, bases_before, runs_scored)
+    return bases, runs, outs, runs_scored, rbis
