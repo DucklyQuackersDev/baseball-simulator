@@ -17,25 +17,25 @@ Follow the steps below:
 
 ## Current Features
 - Simple game simulation with working base running mechanics and score tracking
-- 2 teams with players assigned randomly at runtime
-- Player stats affect hitting outcomes and run bases
+- 16 teams with players assigned randomly at runtime, only the first 2 are used in the simulation
+- Player stats affect hitting outcomes
+- New player generator in /tools so you can generate your own random players
 
 ## Upcoming Features
 - fielding positions and stats
 - more specific hit data (where was the ball hit? what positions we're involved in the fielding)
 - errors
 - better baserunning functionality (stolen bases, 1st to 3rd on singles, advance in a fielders choice)
-- better pitching (wild pitches, hit by pitch etc.)
+- better pitching (wild pitches, hit by pitch etc., better timings on pulling pitcher)
+- full season simulation
 
-## Desired Features
-- Full league season simulation
 
 ## Built With
 - [VS Code](https://code.visualstudio.com/) - text editor
 - [Python 3.14](https://www.python.org/downloads/release/python-3140/)
 
 ## Versioning
-Current version 2.1.1
+Current version 2.0.2
 
 ## Authors
 - **Duck** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)

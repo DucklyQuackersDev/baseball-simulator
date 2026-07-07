@@ -10,7 +10,7 @@ def main():
     teams = assign_players_to_teams(players, team_data)
 
     # Lineups
-    for team in teams:
+    for team in teams[:2]:
         team.print_lineup()
 
     # Simulate 1 game

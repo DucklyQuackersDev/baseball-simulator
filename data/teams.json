@@ -1,6 +1,24 @@
 {
-    "teams": [
-        {"name": "Yankees", "city": "New York" },
-        {"name": "Red Sox", "city": "Boston" }
-    ]
+    "divisions": {
+        "east": [
+            { "name": "Americans",    "city": "New York"     },
+            { "name": "Red Eyes",    "city": "Boston"       },
+            { "name": "Blue Birds",  "city": "Toronto"      },
+            { "name": "Devils",       "city": "Tampa Bay"    },
+            { "name": "Bells",    "city": "Baltimore"    },
+            { "name": "Cars",     "city": "Detroit"      },
+            { "name": "Protectors",  "city": "Cleveland"    },
+            { "name": "Brothers",      "city": "Minnesota"    }
+        ],
+        "west": [
+            { "name": "Dodgeballs",     "city": "Los Angeles"  },
+            { "name": "Davids",      "city": "San Francisco"},
+            { "name": "Fathers",      "city": "San Diego"    },
+            { "name": "Boulders",     "city": "Colorado"     },
+            { "name": "Serpents","city": "Arizona"      },
+            { "name": "Little Bears",        "city": "Chicago"      },
+            { "name": "Popes",   "city": "St. Louis"    },
+            { "name": "Decanters",     "city": "Milwaukee"    }
+        ]
+    }
 }
