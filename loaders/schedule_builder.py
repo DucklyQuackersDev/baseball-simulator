@@ -178,7 +178,7 @@ def get_schedule_summary(teams, schedule):
     for team in teams:
         division = east if team in east else west
         other_div = west if team in east else east
-        div_name = "East" if tem in east else "West"
+        div_name = "East" if team in east else "West"
 
         home_games = sum(1 for g in schedule if g.home_team is team)
         away_games = sum(1 for g in schedule if g.away_team is team)
