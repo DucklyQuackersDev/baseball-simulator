@@ -5,7 +5,7 @@ def should_pull_pitcher(pitcher, runs_allowed):
 
     #Starter limits - Stamina rating
     if pitcher.position == "SP":
-        pitch_limit = int(80 + pitcher.pitching_ratings.stamina * 40) # 80 - 120
+        pitch_limit = int(60 + pitcher.pitching_ratings.stamina * 40) # 60 - 100
         return pitches >= pitch_limit
     
     if pitcher.position == "RP":
