@@ -63,9 +63,9 @@ def SimulateAtBat(batter, pitcher):
         event = "homerun"
     elif roll < bb_rate + k_rate + hr_rate + hit_rate:
         hit_roll = random.random()
-        if hit_roll < 0.60:
+        if hit_roll < 0.65:
             event = "single"
-        elif hit_roll < 0.85:
+        elif hit_roll < 0.97:
             event = "double"
         else:
             event = "triple"
