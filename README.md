@@ -39,6 +39,7 @@ Follow the steps below:
 - better baserunning functionality (stolen bases, 1st to 3rd on singles, advance in a fielders choice)
 - better pitching (wild pitches, hit by pitch etc., better timings on pulling pitcher)
 - Better Scheduling (currently only one game per day, need to update to multi games across different teams)
+- Post Season and World Series
 
 
 ## Built With
