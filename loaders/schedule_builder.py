@@ -170,7 +170,7 @@ def get_schedule_summary(teams, schedule):
     east = teams[:8]
     west = teams[8:]
 
-    print("\nSchedule Summar:")
+    print("\nSchedule Summary:")
     print(f"    {'Team':<13} {'Div':<6} {'Total':>6} {'Home':>6} {"Away":>6} "
           f"{'Div G':>6} {'Inter':>6}")
     print(f"    {'-' * 52}")
