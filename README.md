@@ -14,12 +14,21 @@ Follow the steps below:
 3. Open terminal and navigate to file location
 
 4. type "python main.py" in cmd to run
+    - Default Mode is "Single Game"
+    - To simulate a full season or series pass "season" or "series" as an argument, Ex: "python main.py season" 
+    - To simulate a season from a single team perspective pass argument "team"
 
 ## Current Features
 - Simple game simulation with working base running mechanics and score tracking
 - 16 teams with players assigned randomly at runtime, only the first 2 are used in the simulation
 - Player stats affect hitting outcomes
 - New player generator in /tools so you can generate your own random players
+- Full season scheduler and simulation
+- Multiple simulation modes: 
+    - Single Game
+    - 3 Game series
+    - Full Season
+    - Team Focused Season
 
 ## Upcoming Features
 - fielding positions and stats
@@ -27,7 +36,6 @@ Follow the steps below:
 - errors
 - better baserunning functionality (stolen bases, 1st to 3rd on singles, advance in a fielders choice)
 - better pitching (wild pitches, hit by pitch etc., better timings on pulling pitcher)
-- full season simulation
 
 
 ## Built With
@@ -35,7 +43,7 @@ Follow the steps below:
 - [Python 3.14](https://www.python.org/downloads/release/python-3140/)
 
 ## Versioning
-Current version 2.0.5
+Current version 2.1
 
 ## Authors
 - **Duck** - *Main contributor* - [DucklyQuackersDev](https://github.com/DucklyQuackersDev)

@@ -137,11 +137,11 @@ def get_games_by_date(schedule, target_date):
 
 def get_games_by_month(schedule, year, month):
     """Returns all games in specifc month"""
-    return [g for g in schedule if g.date.year == year and g.date.mont == month]
+    return [g for g in schedule if g.date.year == year and g.date.month == month]
 
 def get_team_schedule(schedule, team):
     """Returns all games for a specific team"""
-    return [g for g in schedule if g.home_team or g.away_team is team]
+    return [g for g in schedule if g.home_team is team or g.away_team is team]
 
 def get_division_schedule(schedule, teams, division="east"):
     """Returns all games where both teams are in the same division"""

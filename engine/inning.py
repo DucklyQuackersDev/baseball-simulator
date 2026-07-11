@@ -8,19 +8,18 @@ SECOND = 1
 THIRD = 2
 
 ## Half Inning
-def SimulateInning(offense, defense):
-    """Half inning simulation"""
-    outs = 0
-    runs = 0
-    bases = [None, None, None] ##at bases[3] would be home, but we dont need that since no one can occupy home, a runner eaching index 3 that runner instead scores
+def SimulateInning(batting_team, fielding_team, silent=False):
+    outs  = 0
+    runs  = 0
+    bases = [None, None, None]
 
     while outs < 3:
-        batter = offense.get_current_batter()
-        pitcher = defense.current_pitcher
+        batter  = batting_team.get_current_batter()
+        pitcher = fielding_team.current_pitcher
 
         event, pitches = SimulateAtBat(batter, pitcher)
-        offense.advance_lineup()
-        
+        batting_team.advance_lineup()
+
         pitcher.game_pitching_stats.pitches += pitches
 
         bases, runs, outs, runs_scored, rbis = advance_bases(event, bases, runs, outs, batter)
@@ -28,10 +27,14 @@ def SimulateInning(offense, defense):
         batter.record_at_bat(event, rbis=rbis)
         pitcher.record_pitching(event, runs_scored)
 
-        print(f"  {batter.short_name:<12} {event:<12} | "
-              f"Bases: {bases} | Outs: {outs} | Runs: {runs}")
-        
-    defense.current_pitcher.record_pitching("", 0, innings_pitched=1)
-            
-    print(f"  End of inning - Runs scored: {runs}")
+        if not silent:
+            print(f"  {batter.short_name:<12} {event:<12} | "
+                  f"Bases: {[b.last_name if b else None for b in bases]} | "
+                  f"Outs: {outs} | Runs: {runs}")
+
+    fielding_team.current_pitcher.record_pitching("", 0, innings_pitched=1)
+
+    if not silent:
+        print(f"  End of inning — Runs scored: {runs}")
+
     return runs
