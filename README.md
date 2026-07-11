@@ -13,7 +13,9 @@ Follow the steps below:
 
 3. Open terminal and navigate to file location
 
-4. type "python main.py" in cmd to run
+4. (Optional) Generate your own players by running "python tools/generate_players.py"
+
+5. type "python main.py" in cmd to run
     - Default Mode is "Single Game"
     - To simulate a full season or series pass "season" or "series" as an argument, Ex: "python main.py season" 
     - To simulate a season from a single team perspective pass argument "team"
