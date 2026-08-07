@@ -5,6 +5,7 @@ from loaders.roster_builder   import assign_players_to_teams
 from loaders.schedule_builder import (
     generate_season_schedule,
     verify_schedule,
+    verify_stretches,
     get_schedule_summary,
     print_schedule,
     print_calendar,
@@ -36,12 +37,35 @@ def mode_game(teams):
 
 
 def mode_series(teams):
-    """Playes a short series between two teams with results printed"""
+    """
+    Simulates a short series between two specific teams
+    argv[2] = home team
+    argv[3] = away team
+    argv[4] = series length
+    Ex: python main.py series "Americans" "Red Eyes"
+    """
+    if len(sys.argv) < 4:
+        print("Usage: python main.py series <home team> <away team> <games>")
+        print(f"Available teams: {', '.join(t.name for t in teams)}")
+        return
 
-    home = teams[0]
-    away = teams[1]
+    home_name     = sys.argv[2]
+    away_name     = sys.argv[3]
+    series_length = int(sys.argv[4]) if len(sys.argv) > 4 else 3
 
-    series_length = 3
+    home = next((t for t in teams if t.name.lower() == home_name.lower()), None)
+    away = next((t for t in teams if t.name.lower() == away_name.lower()), None)
+
+    if home is None:
+        print(f"Home team '{home_name}' not found")
+        print(f"Available teams: {', '.join(t.name for t in teams)}")
+        return
+
+    if away is None:
+        print(f"Away team '{away_name}' not found")
+        print(f"Available teams: {', '.join(t.name for t in teams)}")
+        return
+
     results = {"home": 0, "away": 0}
 
     print(f"\n{away.name} @ {home.name} — {series_length} game series")
@@ -70,16 +94,20 @@ def mode_season(teams):
         teams,
         games_against_division = 4,
         games_against_others = 2,
-        start_date = date(2026, 4, 1)
+        start_date = date(2026, 4, 1),
+        max_stretch = 3
     )
 
+    #debug
+    print(f"First game: {min(g.date for g in schedule)}")
+    print(f"Last game:  {max(g.date for g in schedule)}")
+    print(f"Games in April 2026: {len([g for g in schedule if g.date.month == 4 and g.date.year == 2026])}")
+
     verify_schedule(teams, schedule)
+    verify_stretches(schedule, teams)
     get_schedule_summary(teams, schedule)
 
-    standings = SimulateSeason(teams, schedule, verbose=False)
-
-    # print april calendar as a sample
-    print_calendar(schedule, 2026, 4)
+    SimulateSeason(teams, schedule, verbose=False)
 
     # print first team's calendar as a sample
     print_team_calendar(schedule, teams[0], 2026, 4)
@@ -95,8 +123,9 @@ def mode_schedule(teams):
     )
 
     verify_schedule(teams, schedule)
+    verify_stretches(schedule, teams)
     get_schedule_summary(teams, schedule)
-    print_calendar(schedule, 2025, 4)
+    print_schedule(schedule)
     print_team_calendar(schedule, teams[0], 2026, 4)    
 
 
@@ -131,7 +160,7 @@ def mode_team(teams):
                   (g.away_team is team and g.away_runs < g.home_runs)))
 
     print(f"\n{team.city} {team.name} — {wins}W {losses}L")
-    print_team_calendar(schedule, team, 2025, 4)
+    print_team_calendar(schedule, team, 2026, 4)
 
     print(f"\n  {'Date':<12} {'Opponent':<16} {'H/A':<5} {'Result'}")
     print(f"  {'-' * 46}")
