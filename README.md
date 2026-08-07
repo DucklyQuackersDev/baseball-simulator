@@ -18,8 +18,8 @@ Follow the steps below:
 5. type "python main.py" in cmd to run
     - Default Mode is "Single Game" between New York and Boston
     - To simulate a full season: "python main.py season"
-    - To simulate a series between two teams from the list: "python main.py series "[team_name1]" "[team_name2]" [#games]
-    - To simulate a season from a single team perspective chosen from the list: "python main.py team [team_name]"
+    - To simulate a series between two teams from the list: python main.py series "[team_name1]" "[team_name2]" [#games]
+    - To simulate a season from a single team perspective chosen from the list: python main.py team [team_name]
 
 ## Current Features
 - Simple game simulation with working base running mechanics and score tracking
